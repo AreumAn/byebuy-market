@@ -1,25 +1,27 @@
-import FormButton from "@/components/form-btn";
-import FormInput from "@/components/form-input";
-import SocialLogin from "@/components/social-login";
-
-export default function LogIn() {
+import Input from '@/components/input';
+import Button from '@/components/button';
+export default function SMSLogin() {
   return (
     <div className="flex flex-col gap-10 py-8 px-6">
       <div className="flex flex-col gap-2 *:font-medium">
-        <h1 className="text-2xl">안녕하세요!</h1>
-        <h2 className="text-xl">Log in with email and password.</h2>
+        <h1 className="text-2xl">SMS Log in</h1>
+        <h2 className="text-xl">Verify your phone number.</h2>
       </div>
       <form className="flex flex-col gap-3">
-        <FormInput type="email" placeholder="Email" required errors={[]} />
-        <FormInput
-          type="password"
-          placeholder="Password"
+        <Input
+          type="number"
+          placeholder="Phone number"
           required
           errors={[]}
         />
-        <FormButton loading={false} text="Log in" />
+        <Input
+          type="number"
+          placeholder="Verification code"
+          required
+          errors={[]}
+        />
+        <Button loading={false} text="Verify" />
       </form>
-      <SocialLogin />
     </div>
   );
 }
