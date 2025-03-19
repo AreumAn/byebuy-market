@@ -11,6 +11,8 @@ const publicOnlyUrls: Routes = {
   "/create-account": true,
   "/login": true,
   "/sms": true,
+  "/github/start": true,
+  "/github/complete": true,
 }
 
 export default async function middleware(request: NextRequest) {
