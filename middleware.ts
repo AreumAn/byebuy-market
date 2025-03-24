@@ -26,7 +26,7 @@ export default async function middleware(request: NextRequest) {
     // User is logged in
     if(exists) {
       // User is logged in and is trying to access a public page
-      // return NextResponse.redirect(new URL("/products", request.url));
+      return NextResponse.redirect(new URL("/home", request.url));
     }
   }
 }
